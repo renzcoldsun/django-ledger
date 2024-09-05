@@ -9,9 +9,13 @@ Miguel Sanda <msanda@arrobalytics.com>
 from django.urls import reverse
 from django.utils.translation import gettext as _
 from django.views.generic import RedirectView, ListView
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+from django.conf import settings as global_settings
 
 from django_ledger.models.entity import EntityModel
 from django_ledger.views.mixins import DjangoLedgerSecurityMixIn
+
 
 
 class RootUrlView(RedirectView):
@@ -38,6 +42,14 @@ class DashboardView(DjangoLedgerSecurityMixIn, ListView):
         return context
 
     def get_queryset(self):
-        return EntityModel.objects.for_user(
-            user_model=self.request.user
-        ).order_by('-created')
+        UserModel = get_user_model()
+        if global_settings.ENTITY_USER:
+            user_model = UserModel.objects.get(
+                username__exact=global_settings.ENTITY_USER)
+            return EntityModel.objects.for_user(
+                user_model=user_model
+            ).order_by('-created')
+        else:
+            return EntityModel.objects.for_user(
+                user_model=self.request.user
+            ).order_by('-created')
