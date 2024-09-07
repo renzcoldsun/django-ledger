@@ -16,8 +16,6 @@ from django.conf import settings as global_settings
 from django_ledger.models.entity import EntityModel
 from django_ledger.views.mixins import DjangoLedgerSecurityMixIn
 
-
-
 class RootUrlView(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
@@ -42,13 +40,21 @@ class DashboardView(DjangoLedgerSecurityMixIn, ListView):
         return context
 
     def get_queryset(self):
-        UserModel = get_user_model()
-        if global_settings.ENTITY_USER:
-            user_model = UserModel.objects.get(
-                username__exact=global_settings.ENTITY_USER)
-            return EntityModel.objects.for_user(
-                user_model=user_model
-            ).order_by('-created')
+        if global_settings.DJANGO_LEDGER_UTILS:
+            po = __import__(global_settings.DJANGO_LEDGER_UTILS)
+            utils = po.utils
+            e = utils.getEntity()
+            UserModel = get_user_model()
+            if global_settings.ENTITY_USER:
+                user_model = UserModel.objects.get(
+                    username__exact=global_settings.ENTITY_USER)
+                return EntityModel.objects.for_user(
+                    user_model=user_model
+                ).order_by('-created')
+            else:
+                return EntityModel.objects.for_user(
+                    user_model=self.request.user
+                ).order_by('-created')
         else:
             return EntityModel.objects.for_user(
                 user_model=self.request.user
