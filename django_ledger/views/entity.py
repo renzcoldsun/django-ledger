@@ -14,6 +14,8 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, RedirectView, DeleteView
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
 
 from django_ledger.forms.entity import EntityModelUpdateForm, EntityModelCreateForm
 from django_ledger.io.io_core import get_localdate, get_localtime
@@ -35,8 +37,14 @@ class EntityModelModelViewQuerySetMixIn:
 
     def get_queryset(self):
         if self.queryset is None:
+            user_model = self.request.user
+            if global_settings.DJANGO_LEDGER_UTILS:
+                UserModel = get_user_model()
+                username = global_settings.ENTITY_USER
+                user_model = UserModel.objects.get(username__exact=username)
+
             self.queryset = EntityModel.objects.for_user(
-                user_model=self.request.user).select_related('default_coa')
+                user_model=user_model).select_related('default_coa')
         return super().get_queryset()
 
 
@@ -70,6 +78,10 @@ class EntityModelCreateView(DjangoLedgerSecurityMixIn, EntityModelModelViewQuery
         sample_data = form.cleaned_data.get('generate_sample_data')
 
         user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
 
         entity_model: EntityModel = EntityModel(
             name=cleaned_data['name'],
