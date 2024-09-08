@@ -21,6 +21,7 @@ from django_ledger.models.mixins import ContactInfoMixIn, CreateUpdateMixIn, Tax
 from django_ledger.models.utils import lazy_loader
 from django_ledger.settings import DJANGO_LEDGER_DOCUMENT_NUMBER_PADDING, DJANGO_LEDGER_CUSTOMER_NUMBER_PREFIX
 
+from django.conf import settings as global_settings
 
 class CustomerModelQueryset(QuerySet):
     """
@@ -107,6 +108,8 @@ class CustomerModelManager(models.Manager):
             >>> customer_model_qs = CustomerModel.objects.for_user(user_model=request_user)
         """
         qs = self.get_queryset()
+        if global_settings.DJANGO_LEDGER_UTILS:
+            return qs
         if user_model.is_superuser:
             return qs
         return qs.filter(

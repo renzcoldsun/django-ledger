@@ -15,17 +15,26 @@ from django_ledger.models.customer import CustomerModel
 from django_ledger.models.entity import EntityModel
 from django_ledger.views.mixins import DjangoLedgerSecurityMixIn
 
+# for getting models
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
 
 class CustomerModelModelViewQuerySetMixIn:
     queryset = None
 
     def get_queryset(self):
         if self.queryset is None:
+            user_model = self.request.user
+            if global_settings.DJANGO_LEDGER_UTILS:
+                UserModel = get_user_model()
+                username = global_settings.ENTITY_USER
+                user_model = UserModel.objects.get(username__exact=username)
             self.queryset = CustomerModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user
+                user_model=user_model
             ).order_by('-updated')
-        return super().get_queryset()
+        qs = super().get_queryset()
+        return qs
 
 
 class CustomerModelListView(DjangoLedgerSecurityMixIn,
@@ -39,7 +48,6 @@ class CustomerModelListView(DjangoLedgerSecurityMixIn,
         'header_subtitle_icon': 'dashicons:businesswoman'
     }
     context_object_name = 'customers'
-
 
 class CustomerModelCreateView(DjangoLedgerSecurityMixIn,
                               CustomerModelModelViewQuerySetMixIn,
@@ -62,8 +70,14 @@ class CustomerModelCreateView(DjangoLedgerSecurityMixIn,
 
     def form_valid(self, form):
         customer_model: CustomerModel = form.save(commit=False)
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         entity_model = EntityModel.objects.for_user(
-            user_model=self.request.user
+            user_model=user_model
         ).get(slug__exact=self.kwargs['entity_slug'])
         customer_model.entity_model = entity_model
         customer_model.save()
