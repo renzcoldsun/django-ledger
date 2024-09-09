@@ -28,11 +28,15 @@
                     <div class="navbar-item">CE TO: {{ tx_digest_context.IO_RESULT.ce_to_date | date }}</div>
                 {% endif %}
                 <div class="navbar-item">
-                    <a href="{% url 'django_ledger:logout' %}"
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button class="button is-small is-danger is-outlined" id="djl-el=logout-button-nav" type="submit">Logout</button>
+                    </form>
+                    <!-- <a href="{% url 'django_ledger:logout' %}"
                        id="djl-el=logout-button-nav"
                        class="button is-small is-danger is-outlined">
                         {% trans 'Logout' %}
-                    </a>
+                    </a> -->
                 </div>
                 <div class="navbar-item">{% feedback_button %}</div>
                 <div class="navbar-item">v{% current_version %}</div>
