@@ -12,15 +12,25 @@ from django_ledger.views.mixins import (DjangoLedgerSecurityMixIn, QuarterlyRepo
                                         DateReportMixIn, BaseDateNavigationUrlMixIn, EntityUnitMixIn, YearlyReportMixIn,
                                         PDFReportMixIn)
 
+#
+from django.conf import settings as global_settings
+from django.contrib.auth import get_user_model
+UserModel = get_user_model()
 
 class EntityUnitModelModelViewQuerySetMixIn:
     queryset = None
 
     def get_queryset(self):
         if self.queryset is None:
+            user_model = self.request.user
+            if global_settings.DJANGO_LEDGER_UTILS:
+                UserModel = get_user_model()
+                username = global_settings.ENTITY_USER
+                user_model = UserModel.objects.get(username__exact=username)
+
             self.queryset = EntityUnitModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user
+                user_model=user_model
             ).select_related('entity')
         return super().get_queryset()
 
@@ -71,8 +81,14 @@ class EntityUnitModelCreateView(DjangoLedgerSecurityMixIn, EntityUnitModelModelV
                        })
 
     def form_valid(self, form):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         entity_unit_model: EntityUnitModel = form.save(commit=False)
-        entity_model_qs = EntityModel.objects.for_user(user_model=self.request.user)
+        entity_model_qs = EntityModel.objects.for_user(user_model=user_model)
         entity_model = get_object_or_404(entity_model_qs, slug__exact=self.kwargs['entity_slug'])
         entity_unit_model.entity = entity_model
         EntityUnitModel.add_root(instance=entity_unit_model)

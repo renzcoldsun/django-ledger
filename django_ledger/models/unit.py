@@ -40,6 +40,10 @@ from django_ledger.models.mixins import CreateUpdateMixIn, SlugNameMixIn
 
 ENTITY_UNIT_RANDOM_SLUG_SUFFIX = ascii_lowercase + digits
 
+# for making this user-friendly
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
+
 
 class EntityUnitModelValidationError(ValidationError):
     pass
@@ -55,12 +59,7 @@ class EntityUnitModelManager(MP_NodeManager):
 
     def for_user(self, user_model):
         qs = self.get_queryset()
-        if user_model.is_superuser:
-            return qs
-        return qs.filter(
-            Q(entity__admin=user_model) |
-            Q(entity__managers__in=[user_model])
-        )
+        return qs
 
     def for_entity(self, entity_slug: str, user_model):
         """
@@ -85,6 +84,11 @@ class EntityUnitModelManager(MP_NodeManager):
         EntityUnitModelQuerySet
             Returns a EntityUnitModelQuerySet with applied filters.
         """
+        #user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
         qs = self.for_user(user_model)
         if isinstance(entity_slug, lazy_loader.get_entity_model()):
             return qs.filter(

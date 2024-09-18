@@ -1,0 +1,2123 @@
+{
+    "AFN": {
+      "Country": "AFGHANISTAN",
+      "Currency": "Afghani",
+      "NumericCode": 971,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "EUR": {
+      "Country": "SERBIA AND MONTENEGRO",
+      "Currency": "Euro",
+      "NumericCode": 978,
+      "MinorUnit": "",
+      "WithdrawalDate": "2006-10"
+    },
+    "ALL": {
+      "Country": "ALBANIA",
+      "Currency": "Lek",
+      "NumericCode": "008",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "DZD": {
+      "Country": "ALGERIA",
+      "Currency": "Algerian Dinar",
+      "NumericCode": "012",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "USD": {
+      "Country": "VIRGIN ISLANDS (U.S.)",
+      "Currency": "US Dollar",
+      "NumericCode": 840,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "AOA": {
+      "Country": "ANGOLA",
+      "Currency": "Kwanza",
+      "NumericCode": 973,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "XCD": {
+      "Country": "SAINT VINCENT AND THE GRENADINES",
+      "Currency": "East Caribbean Dollar",
+      "NumericCode": 951,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "---": {
+      "Country": "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS",
+      "Currency": "No universal currency",
+      "NumericCode": "",
+      "MinorUnit": "",
+      "WithdrawalDate": ""
+    },
+    "ARS": {
+      "Country": "ARGENTINA",
+      "Currency": "Argentine Peso",
+      "NumericCode": "032",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "AMD": {
+      "Country": "ARMENIA",
+      "Currency": "Armenian Dram",
+      "NumericCode": "051",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "AWG": {
+      "Country": "ARUBA",
+      "Currency": "Aruban Florin",
+      "NumericCode": 533,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "AUD": {
+      "Country": "TUVALU",
+      "Currency": "Australian Dollar",
+      "NumericCode": "036",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "AZN": {
+      "Country": "AZERBAIJAN",
+      "Currency": "Azerbaijan Manat",
+      "NumericCode": 944,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BSD": {
+      "Country": "BAHAMAS (THE)",
+      "Currency": "Bahamian Dollar",
+      "NumericCode": "044",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BHD": {
+      "Country": "BAHRAIN",
+      "Currency": "Bahraini Dinar",
+      "NumericCode": "048",
+      "MinorUnit": 3,
+      "WithdrawalDate": ""
+    },
+    "BDT": {
+      "Country": "BANGLADESH",
+      "Currency": "Taka",
+      "NumericCode": "050",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BBD": {
+      "Country": "BARBADOS",
+      "Currency": "Barbados Dollar",
+      "NumericCode": "052",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BYN": {
+      "Country": "BELARUS",
+      "Currency": "Belarusian Ruble",
+      "NumericCode": 933,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BZD": {
+      "Country": "BELIZE",
+      "Currency": "Belize Dollar",
+      "NumericCode": "084",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "XOF": {
+      "Country": "TOGO",
+      "Currency": "CFA Franc BCEAO",
+      "NumericCode": 952,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "BMD": {
+      "Country": "BERMUDA",
+      "Currency": "Bermudian Dollar",
+      "NumericCode": "060",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "INR": {
+      "Country": "INDIA",
+      "Currency": "Indian Rupee",
+      "NumericCode": 356,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BTN": {
+      "Country": "BHUTAN",
+      "Currency": "Ngultrum",
+      "NumericCode": "064",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BOB": {
+      "Country": "BOLIVIA (PLURINATIONAL STATE OF)",
+      "Currency": "Boliviano",
+      "NumericCode": "068",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BOV": {
+      "Country": "BOLIVIA (PLURINATIONAL STATE OF)",
+      "Currency": "Mvdol",
+      "NumericCode": 984,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BAM": {
+      "Country": "BOSNIA AND HERZEGOVINA",
+      "Currency": "Convertible Mark",
+      "NumericCode": 977,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BWP": {
+      "Country": "BOTSWANA",
+      "Currency": "Pula",
+      "NumericCode": "072",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "NOK": {
+      "Country": "SVALBARD AND JAN MAYEN",
+      "Currency": "Norwegian Krone",
+      "NumericCode": 578,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BRL": {
+      "Country": "BRAZIL",
+      "Currency": "Brazilian Real",
+      "NumericCode": 986,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BND": {
+      "Country": "BRUNEI DARUSSALAM",
+      "Currency": "Brunei Dollar",
+      "NumericCode": "096",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BGN": {
+      "Country": "BULGARIA",
+      "Currency": "Bulgarian Lev",
+      "NumericCode": 975,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "BIF": {
+      "Country": "BURUNDI",
+      "Currency": "Burundi Franc",
+      "NumericCode": 108,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "CVE": {
+      "Country": "CABO VERDE",
+      "Currency": "Cabo Verde Escudo",
+      "NumericCode": 132,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "KHR": {
+      "Country": "CAMBODIA",
+      "Currency": "Riel",
+      "NumericCode": 116,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "XAF": {
+      "Country": "GABON",
+      "Currency": "CFA Franc BEAC",
+      "NumericCode": 950,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "CAD": {
+      "Country": "CANADA",
+      "Currency": "Canadian Dollar",
+      "NumericCode": 124,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "KYD": {
+      "Country": "CAYMAN ISLANDS (THE)",
+      "Currency": "Cayman Islands Dollar",
+      "NumericCode": 136,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "CLP": {
+      "Country": "CHILE",
+      "Currency": "Chilean Peso",
+      "NumericCode": 152,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "CLF": {
+      "Country": "CHILE",
+      "Currency": "Unidad de Fomento",
+      "NumericCode": 990,
+      "MinorUnit": 4,
+      "WithdrawalDate": ""
+    },
+    "CNY": {
+      "Country": "CHINA",
+      "Currency": "Yuan Renminbi",
+      "NumericCode": 156,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "COP": {
+      "Country": "COLOMBIA",
+      "Currency": "Colombian Peso",
+      "NumericCode": 170,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "COU": {
+      "Country": "COLOMBIA",
+      "Currency": "Unidad de Valor Real",
+      "NumericCode": 970,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "KMF": {
+      "Country": "COMOROS (THE)",
+      "Currency": "Comorian Franc",
+      "NumericCode": 174,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "CDF": {
+      "Country": "CONGO (THE DEMOCRATIC REPUBLIC OF THE)",
+      "Currency": "Congolese Franc",
+      "NumericCode": 976,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "NZD": {
+      "Country": "TOKELAU",
+      "Currency": "New Zealand Dollar",
+      "NumericCode": 554,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "CRC": {
+      "Country": "COSTA RICA",
+      "Currency": "Costa Rican Colon",
+      "NumericCode": 188,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "HRK": {
+      "Country": "CROATIA",
+      "Currency": "Croatian Kuna",
+      "NumericCode": 191,
+      "MinorUnit": "",
+      "WithdrawalDate": "2015-06"
+    },
+    "CUP": {
+      "Country": "CUBA",
+      "Currency": "Cuban Peso",
+      "NumericCode": 192,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "CUC": {
+      "Country": "CUBA",
+      "Currency": "Peso Convertible",
+      "NumericCode": 931,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "ANG": {
+      "Country": "NETHERLANDS ANTILLES",
+      "Currency": "Netherlands Antillean Guilder",
+      "NumericCode": 532,
+      "MinorUnit": "",
+      "WithdrawalDate": "2010-10"
+    },
+    "CZK": {
+      "Country": "CZECHIA",
+      "Currency": "Czech Koruna",
+      "NumericCode": 203,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "DKK": {
+      "Country": "GREENLAND",
+      "Currency": "Danish Krone",
+      "NumericCode": 208,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "DJF": {
+      "Country": "DJIBOUTI",
+      "Currency": "Djibouti Franc",
+      "NumericCode": 262,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "DOP": {
+      "Country": "DOMINICAN REPUBLIC (THE)",
+      "Currency": "Dominican Peso",
+      "NumericCode": 214,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "EGP": {
+      "Country": "EGYPT",
+      "Currency": "Egyptian Pound",
+      "NumericCode": 818,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SVC": {
+      "Country": "EL SALVADOR",
+      "Currency": "El Salvador Colon",
+      "NumericCode": 222,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "ERN": {
+      "Country": "ERITREA",
+      "Currency": "Nakfa",
+      "NumericCode": 232,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SZL": {
+      "Country": "SWAZILAND",
+      "Currency": "Lilangeni",
+      "NumericCode": 748,
+      "MinorUnit": "",
+      "WithdrawalDate": "2018-08"
+    },
+    "ETB": {
+      "Country": "ETHIOPIA",
+      "Currency": "Ethiopian Birr",
+      "NumericCode": 230,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "FKP": {
+      "Country": "FALKLAND ISLANDS (THE) [MALVINAS]",
+      "Currency": "Falkland Islands Pound",
+      "NumericCode": 238,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "FJD": {
+      "Country": "FIJI",
+      "Currency": "Fiji Dollar",
+      "NumericCode": 242,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "XPF": {
+      "Country": "WALLIS AND FUTUNA",
+      "Currency": "CFP Franc",
+      "NumericCode": 953,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "GMD": {
+      "Country": "GAMBIA (THE)",
+      "Currency": "Dalasi",
+      "NumericCode": 270,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "GEL": {
+      "Country": "GEORGIA",
+      "Currency": "Lari",
+      "NumericCode": 981,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "GHS": {
+      "Country": "GHANA",
+      "Currency": "Ghana Cedi",
+      "NumericCode": 936,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "GIP": {
+      "Country": "GIBRALTAR",
+      "Currency": "Gibraltar Pound",
+      "NumericCode": 292,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "GTQ": {
+      "Country": "GUATEMALA",
+      "Currency": "Quetzal",
+      "NumericCode": 320,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "GBP": {
+      "Country": "UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)",
+      "Currency": "Pound Sterling",
+      "NumericCode": 826,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "GNF": {
+      "Country": "GUINEA",
+      "Currency": "Guinean Franc",
+      "NumericCode": 324,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "GYD": {
+      "Country": "GUYANA",
+      "Currency": "Guyana Dollar",
+      "NumericCode": 328,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "HTG": {
+      "Country": "HAITI",
+      "Currency": "Gourde",
+      "NumericCode": 332,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "HNL": {
+      "Country": "HONDURAS",
+      "Currency": "Lempira",
+      "NumericCode": 340,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "HKD": {
+      "Country": "HONG KONG",
+      "Currency": "Hong Kong Dollar",
+      "NumericCode": 344,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "HUF": {
+      "Country": "HUNGARY",
+      "Currency": "Forint",
+      "NumericCode": 348,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "ISK": {
+      "Country": "ICELAND",
+      "Currency": "Iceland Krona",
+      "NumericCode": 352,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "IDR": {
+      "Country": "TIMOR-LESTE",
+      "Currency": "Rupiah",
+      "NumericCode": 360,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-07"
+    },
+    "XDR": {
+      "Country": "INTERNATIONAL MONETARY FUND (IMF)",
+      "Currency": "SDR (Special Drawing Right)",
+      "NumericCode": 960,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "IRR": {
+      "Country": "IRAN (ISLAMIC REPUBLIC OF)",
+      "Currency": "Iranian Rial",
+      "NumericCode": 364,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "IQD": {
+      "Country": "IRAQ",
+      "Currency": "Iraqi Dinar",
+      "NumericCode": 368,
+      "MinorUnit": 3,
+      "WithdrawalDate": ""
+    },
+    "ILS": {
+      "Country": "ISRAEL",
+      "Currency": "New Israeli Sheqel",
+      "NumericCode": 376,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "JMD": {
+      "Country": "JAMAICA",
+      "Currency": "Jamaican Dollar",
+      "NumericCode": 388,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "JPY": {
+      "Country": "JAPAN",
+      "Currency": "Yen",
+      "NumericCode": 392,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "JOD": {
+      "Country": "JORDAN",
+      "Currency": "Jordanian Dinar",
+      "NumericCode": 400,
+      "MinorUnit": 3,
+      "WithdrawalDate": ""
+    },
+    "KZT": {
+      "Country": "KAZAKHSTAN",
+      "Currency": "Tenge",
+      "NumericCode": 398,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "KES": {
+      "Country": "KENYA",
+      "Currency": "Kenyan Shilling",
+      "NumericCode": 404,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "KPW": {
+      "Country": "KOREA (THE DEMOCRATIC PEOPLE'S REPUBLIC OF)",
+      "Currency": "North Korean Won",
+      "NumericCode": 408,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "KRW": {
+      "Country": "KOREA (THE REPUBLIC OF)",
+      "Currency": "Won",
+      "NumericCode": 410,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "KWD": {
+      "Country": "KUWAIT",
+      "Currency": "Kuwaiti Dinar",
+      "NumericCode": 414,
+      "MinorUnit": 3,
+      "WithdrawalDate": ""
+    },
+    "KGS": {
+      "Country": "KYRGYZSTAN",
+      "Currency": "Som",
+      "NumericCode": 417,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "LAK": {
+      "Country": "LAO PEOPLE'S DEMOCRATIC REPUBLIC (THE)",
+      "Currency": "Lao Kip",
+      "NumericCode": 418,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "LBP": {
+      "Country": "LEBANON",
+      "Currency": "Lebanese Pound",
+      "NumericCode": 422,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "LSL": {
+      "Country": "LESOTHO",
+      "Currency": "Loti",
+      "NumericCode": 426,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "ZAR": {
+      "Country": "SOUTH AFRICA",
+      "Currency": "Rand",
+      "NumericCode": 710,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "LRD": {
+      "Country": "LIBERIA",
+      "Currency": "Liberian Dollar",
+      "NumericCode": 430,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "LYD": {
+      "Country": "LIBYA",
+      "Currency": "Libyan Dinar",
+      "NumericCode": 434,
+      "MinorUnit": 3,
+      "WithdrawalDate": ""
+    },
+    "CHF": {
+      "Country": "SWITZERLAND",
+      "Currency": "Swiss Franc",
+      "NumericCode": 756,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MOP": {
+      "Country": "MACAO",
+      "Currency": "Pataca",
+      "NumericCode": 446,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MKD": {
+      "Country": "NORTH MACEDONIA",
+      "Currency": "Denar",
+      "NumericCode": 807,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MGA": {
+      "Country": "MADAGASCAR",
+      "Currency": "Malagasy Ariary",
+      "NumericCode": 969,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MWK": {
+      "Country": "MALAWI",
+      "Currency": "Kwacha",
+      "NumericCode": 454,
+      "MinorUnit": "",
+      "WithdrawalDate": "2016-02"
+    },
+    "MYR": {
+      "Country": "MALAYSIA",
+      "Currency": "Malaysian Ringgit",
+      "NumericCode": 458,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MVR": {
+      "Country": "MALDIVES",
+      "Currency": "Rufiyaa",
+      "NumericCode": 462,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MRU": {
+      "Country": "MAURITANIA",
+      "Currency": "Ouguiya",
+      "NumericCode": 929,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MUR": {
+      "Country": "MAURITIUS",
+      "Currency": "Mauritius Rupee",
+      "NumericCode": 480,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "XUA": {
+      "Country": "MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP",
+      "Currency": "ADB Unit of Account",
+      "NumericCode": 965,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "MXN": {
+      "Country": "MEXICO",
+      "Currency": "Mexican Peso",
+      "NumericCode": 484,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MXV": {
+      "Country": "MEXICO",
+      "Currency": "Mexican Unidad de Inversion (UDI)",
+      "NumericCode": 979,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MDL": {
+      "Country": "MOLDOVA (THE REPUBLIC OF)",
+      "Currency": "Moldovan Leu",
+      "NumericCode": 498,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MNT": {
+      "Country": "MONGOLIA",
+      "Currency": "Tugrik",
+      "NumericCode": 496,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MAD": {
+      "Country": "WESTERN SAHARA",
+      "Currency": "Moroccan Dirham",
+      "NumericCode": 504,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MZN": {
+      "Country": "MOZAMBIQUE",
+      "Currency": "Mozambique Metical",
+      "NumericCode": 943,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "MMK": {
+      "Country": "MYANMAR",
+      "Currency": "Kyat",
+      "NumericCode": 104,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "NAD": {
+      "Country": "NAMIBIA",
+      "Currency": "Namibia Dollar",
+      "NumericCode": 516,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "NPR": {
+      "Country": "NEPAL",
+      "Currency": "Nepalese Rupee",
+      "NumericCode": 524,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "NIO": {
+      "Country": "NICARAGUA",
+      "Currency": "Cordoba Oro",
+      "NumericCode": 558,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "NGN": {
+      "Country": "NIGERIA",
+      "Currency": "Naira",
+      "NumericCode": 566,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "OMR": {
+      "Country": "OMAN",
+      "Currency": "Rial Omani",
+      "NumericCode": 512,
+      "MinorUnit": 3,
+      "WithdrawalDate": ""
+    },
+    "PKR": {
+      "Country": "PAKISTAN",
+      "Currency": "Pakistan Rupee",
+      "NumericCode": 586,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "PAB": {
+      "Country": "PANAMA",
+      "Currency": "Balboa",
+      "NumericCode": 590,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "PGK": {
+      "Country": "PAPUA NEW GUINEA",
+      "Currency": "Kina",
+      "NumericCode": 598,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "PYG": {
+      "Country": "PARAGUAY",
+      "Currency": "Guarani",
+      "NumericCode": 600,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "PEN": {
+      "Country": "PERU",
+      "Currency": "Nuevo Sol",
+      "NumericCode": 604,
+      "MinorUnit": "",
+      "WithdrawalDate": "2015-12"
+    },
+    "PHP": {
+      "Country": "PHILIPPINES (THE)",
+      "Currency": "Philippine Peso",
+      "NumericCode": 608,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "PLN": {
+      "Country": "POLAND",
+      "Currency": "Zloty",
+      "NumericCode": 985,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "QAR": {
+      "Country": "QATAR",
+      "Currency": "Qatari Rial",
+      "NumericCode": 634,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "RON": {
+      "Country": "ROMANIA",
+      "Currency": "New Romanian Leu",
+      "NumericCode": 946,
+      "MinorUnit": "",
+      "WithdrawalDate": "2015-06"
+    },
+    "RUB": {
+      "Country": "RUSSIAN FEDERATION (THE)",
+      "Currency": "Russian Ruble",
+      "NumericCode": 643,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "RWF": {
+      "Country": "RWANDA",
+      "Currency": "Rwanda Franc",
+      "NumericCode": 646,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "SHP": {
+      "Country": "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA",
+      "Currency": "Saint Helena Pound",
+      "NumericCode": 654,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "WST": {
+      "Country": "SAMOA",
+      "Currency": "Tala",
+      "NumericCode": 882,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "STN": {
+      "Country": "SAO TOME AND PRINCIPE",
+      "Currency": "Dobra",
+      "NumericCode": 930,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SAR": {
+      "Country": "SAUDI ARABIA",
+      "Currency": "Saudi Riyal",
+      "NumericCode": 682,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "RSD": {
+      "Country": "SERBIA",
+      "Currency": "Serbian Dinar",
+      "NumericCode": 941,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SCR": {
+      "Country": "SEYCHELLES",
+      "Currency": "Seychelles Rupee",
+      "NumericCode": 690,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SLL": {
+      "Country": "SIERRA LEONE",
+      "Currency": "Leone",
+      "NumericCode": 694,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SGD": {
+      "Country": "SINGAPORE",
+      "Currency": "Singapore Dollar",
+      "NumericCode": 702,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "XSU": {
+      "Country": "SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS \"SUCRE",
+      "Currency": "Sucre",
+      "NumericCode": 994,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "SBD": {
+      "Country": "SOLOMON ISLANDS",
+      "Currency": "Solomon Islands Dollar",
+      "NumericCode": "090",
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SOS": {
+      "Country": "SOMALIA",
+      "Currency": "Somali Shilling",
+      "NumericCode": 706,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SSP": {
+      "Country": "SOUTH SUDAN",
+      "Currency": "South Sudanese Pound",
+      "NumericCode": 728,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "LKR": {
+      "Country": "SRI LANKA",
+      "Currency": "Sri Lanka Rupee",
+      "NumericCode": 144,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SDG": {
+      "Country": "SOUTH SUDAN",
+      "Currency": "Sudanese Pound",
+      "NumericCode": 938,
+      "MinorUnit": "",
+      "WithdrawalDate": "2012-09"
+    },
+    "SRD": {
+      "Country": "SURINAME",
+      "Currency": "Surinam Dollar",
+      "NumericCode": 968,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SEK": {
+      "Country": "SWEDEN",
+      "Currency": "Swedish Krona",
+      "NumericCode": 752,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "CHE": {
+      "Country": "SWITZERLAND",
+      "Currency": "WIR Euro",
+      "NumericCode": 947,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "CHW": {
+      "Country": "SWITZERLAND",
+      "Currency": "WIR Franc",
+      "NumericCode": 948,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "SYP": {
+      "Country": "SYRIAN ARAB REPUBLIC",
+      "Currency": "Syrian Pound",
+      "NumericCode": 760,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "TWD": {
+      "Country": "TAIWAN (PROVINCE OF CHINA)",
+      "Currency": "New Taiwan Dollar",
+      "NumericCode": 901,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "TJS": {
+      "Country": "TAJIKISTAN",
+      "Currency": "Somoni",
+      "NumericCode": 972,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "TZS": {
+      "Country": "TANZANIA, UNITED REPUBLIC OF",
+      "Currency": "Tanzanian Shilling",
+      "NumericCode": 834,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "THB": {
+      "Country": "THAILAND",
+      "Currency": "Baht",
+      "NumericCode": 764,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "TOP": {
+      "Country": "TONGA",
+      "Currency": "Pa'anga",
+      "NumericCode": 776,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "TTD": {
+      "Country": "TRINIDAD AND TOBAGO",
+      "Currency": "Trinidad and Tobago Dollar",
+      "NumericCode": 780,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "TND": {
+      "Country": "TUNISIA",
+      "Currency": "Tunisian Dinar",
+      "NumericCode": 788,
+      "MinorUnit": 3,
+      "WithdrawalDate": ""
+    },
+    "TRY": {
+      "Country": "TURKEY",
+      "Currency": "New Turkish Lira",
+      "NumericCode": 949,
+      "MinorUnit": "",
+      "WithdrawalDate": "2009-01"
+    },
+    "TMT": {
+      "Country": "TURKMENISTAN",
+      "Currency": "Turkmenistan New Manat",
+      "NumericCode": 934,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "UGX": {
+      "Country": "UGANDA",
+      "Currency": "Uganda Shilling",
+      "NumericCode": 800,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "UAH": {
+      "Country": "UKRAINE",
+      "Currency": "Hryvnia",
+      "NumericCode": 980,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "AED": {
+      "Country": "UNITED ARAB EMIRATES (THE)",
+      "Currency": "UAE Dirham",
+      "NumericCode": 784,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "USN": {
+      "Country": "UNITED STATES OF AMERICA (THE)",
+      "Currency": "US Dollar (Next day)",
+      "NumericCode": 997,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "UYU": {
+      "Country": "URUGUAY",
+      "Currency": "Peso Uruguayo",
+      "NumericCode": 858,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "UYI": {
+      "Country": "URUGUAY",
+      "Currency": "Uruguay Peso en Unidades Indexadas (UI)",
+      "NumericCode": 940,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "UYW": {
+      "Country": "URUGUAY",
+      "Currency": "Unidad Previsional",
+      "NumericCode": 927,
+      "MinorUnit": 4,
+      "WithdrawalDate": ""
+    },
+    "UZS": {
+      "Country": "UZBEKISTAN",
+      "Currency": "Uzbekistan Sum",
+      "NumericCode": 860,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "VUV": {
+      "Country": "VANUATU",
+      "Currency": "Vatu",
+      "NumericCode": 548,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "VES": {
+      "Country": "VENEZUELA (BOLIVARIAN REPUBLIC OF)",
+      "Currency": "Bolívar Soberano",
+      "NumericCode": 928,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "VND": {
+      "Country": "VIET NAM",
+      "Currency": "Dong",
+      "NumericCode": 704,
+      "MinorUnit": 0,
+      "WithdrawalDate": ""
+    },
+    "YER": {
+      "Country": "YEMEN",
+      "Currency": "Yemeni Rial",
+      "NumericCode": 886,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "ZMW": {
+      "Country": "ZAMBIA",
+      "Currency": "Zambian Kwacha",
+      "NumericCode": 967,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "ZWL": {
+      "Country": "ZIMBABWE",
+      "Currency": "Zimbabwe Dollar",
+      "NumericCode": 932,
+      "MinorUnit": 2,
+      "WithdrawalDate": ""
+    },
+    "XBA": {
+      "Country": "ZZ01_Bond Markets Unit European_EURCO",
+      "Currency": "Bond Markets Unit European Composite Unit (EURCO)",
+      "NumericCode": 955,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XBB": {
+      "Country": "ZZ02_Bond Markets Unit European_EMU-6",
+      "Currency": "Bond Markets Unit European Monetary Unit (E.M.U.-6)",
+      "NumericCode": 956,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XBC": {
+      "Country": "ZZ03_Bond Markets Unit European_EUA-9",
+      "Currency": "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)",
+      "NumericCode": 957,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XBD": {
+      "Country": "ZZ04_Bond Markets Unit European_EUA-17",
+      "Currency": "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)",
+      "NumericCode": 958,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XTS": {
+      "Country": "ZZ06_Testing_Code",
+      "Currency": "Codes specifically reserved for testing purposes",
+      "NumericCode": 963,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XXX": {
+      "Country": "ZZ07_No_Currency",
+      "Currency": "The codes assigned for transactions where no currency is involved",
+      "NumericCode": 999,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XAU": {
+      "Country": "ZZ08_Gold",
+      "Currency": "Gold",
+      "NumericCode": 959,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XPD": {
+      "Country": "ZZ09_Palladium",
+      "Currency": "Palladium",
+      "NumericCode": 964,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XPT": {
+      "Country": "ZZ10_Platinum",
+      "Currency": "Platinum",
+      "NumericCode": 962,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "XAG": {
+      "Country": "ZZ11_Silver",
+      "Currency": "Silver",
+      "NumericCode": 961,
+      "MinorUnit": "-",
+      "WithdrawalDate": ""
+    },
+    "AFA": {
+      "Country": "AFGHANISTAN",
+      "Currency": "Afghani",
+      "NumericCode": "004",
+      "MinorUnit": "",
+      "WithdrawalDate": "2003-01"
+    },
+    "FIM": {
+      "Country": "FINLAND",
+      "Currency": "Markka",
+      "NumericCode": 246,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "ALK": {
+      "Country": "ALBANIA",
+      "Currency": "Old Lek",
+      "NumericCode": "008",
+      "MinorUnit": "",
+      "WithdrawalDate": "1989-12"
+    },
+    "ADP": {
+      "Country": "ANDORRA",
+      "Currency": "Andorran Peseta",
+      "NumericCode": "020",
+      "MinorUnit": "",
+      "WithdrawalDate": "2003-07"
+    },
+    "ESP": {
+      "Country": "SPAIN",
+      "Currency": "Spanish Peseta",
+      "NumericCode": 724,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "FRF": {
+      "Country": "SAINT-BARTHÉLEMY",
+      "Currency": "French Franc",
+      "NumericCode": 250,
+      "MinorUnit": "",
+      "WithdrawalDate": "1999-01"
+    },
+    "AOK": {
+      "Country": "ANGOLA",
+      "Currency": "Kwanza",
+      "NumericCode": "024",
+      "MinorUnit": "",
+      "WithdrawalDate": "1991-03"
+    },
+    "AON": {
+      "Country": "ANGOLA",
+      "Currency": "New Kwanza",
+      "NumericCode": "024",
+      "MinorUnit": "",
+      "WithdrawalDate": "2000-02"
+    },
+    "AOR": {
+      "Country": "ANGOLA",
+      "Currency": "Kwanza Reajustado",
+      "NumericCode": 982,
+      "MinorUnit": "",
+      "WithdrawalDate": "2000-02"
+    },
+    "ARA": {
+      "Country": "ARGENTINA",
+      "Currency": "Austral",
+      "NumericCode": "032",
+      "MinorUnit": "",
+      "WithdrawalDate": "1992-01"
+    },
+    "ARP": {
+      "Country": "ARGENTINA",
+      "Currency": "Peso Argentino",
+      "NumericCode": "032",
+      "MinorUnit": "",
+      "WithdrawalDate": "1985-07"
+    },
+    "ARY": {
+      "Country": "ARGENTINA",
+      "Currency": "Peso",
+      "NumericCode": "032",
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "RUR": {
+      "Country": "UZBEKISTAN",
+      "Currency": "Russian Ruble",
+      "NumericCode": 810,
+      "MinorUnit": "",
+      "WithdrawalDate": "1994-07"
+    },
+    "ATS": {
+      "Country": "AUSTRIA",
+      "Currency": "Schilling",
+      "NumericCode": "040",
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "AYM": {
+      "Country": "AZERBAIJAN",
+      "Currency": "Azerbaijan Manat",
+      "NumericCode": 945,
+      "MinorUnit": "",
+      "WithdrawalDate": "2005-10"
+    },
+    "AZM": {
+      "Country": "AZERBAIJAN",
+      "Currency": "Azerbaijanian Manat",
+      "NumericCode": "031",
+      "MinorUnit": "",
+      "WithdrawalDate": "2005-12"
+    },
+    "BYB": {
+      "Country": "BELARUS",
+      "Currency": "Belarusian Ruble",
+      "NumericCode": 112,
+      "MinorUnit": "",
+      "WithdrawalDate": "2001-01"
+    },
+    "BYR": {
+      "Country": "BELARUS",
+      "Currency": "Belarusian Ruble",
+      "NumericCode": 974,
+      "MinorUnit": "",
+      "WithdrawalDate": "2017-01"
+    },
+    "BEC": {
+      "Country": "BELGIUM",
+      "Currency": "Convertible Franc",
+      "NumericCode": 993,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-03"
+    },
+    "BEF": {
+      "Country": "BELGIUM",
+      "Currency": "Belgian Franc",
+      "NumericCode": "056",
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "BEL": {
+      "Country": "BELGIUM",
+      "Currency": "Financial Franc",
+      "NumericCode": 992,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-03"
+    },
+    "BOP": {
+      "Country": "BOLIVIA",
+      "Currency": "Peso boliviano",
+      "NumericCode": "068",
+      "MinorUnit": "",
+      "WithdrawalDate": "1987-02"
+    },
+    "BAD": {
+      "Country": "BOSNIA AND HERZEGOVINA",
+      "Currency": "Dinar",
+      "NumericCode": "070",
+      "MinorUnit": "",
+      "WithdrawalDate": "1998-07"
+    },
+    "BRB": {
+      "Country": "BRAZIL",
+      "Currency": "Cruzeiro",
+      "NumericCode": "076",
+      "MinorUnit": "",
+      "WithdrawalDate": "1986-03"
+    },
+    "BRC": {
+      "Country": "BRAZIL",
+      "Currency": "Cruzado",
+      "NumericCode": "076",
+      "MinorUnit": "",
+      "WithdrawalDate": "1989-02"
+    },
+    "BRE": {
+      "Country": "BRAZIL",
+      "Currency": "Cruzeiro",
+      "NumericCode": "076",
+      "MinorUnit": "",
+      "WithdrawalDate": "1993-03"
+    },
+    "BRN": {
+      "Country": "BRAZIL",
+      "Currency": "New Cruzado",
+      "NumericCode": "076",
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-03"
+    },
+    "BRR": {
+      "Country": "BRAZIL",
+      "Currency": "Cruzeiro Real",
+      "NumericCode": 987,
+      "MinorUnit": "",
+      "WithdrawalDate": "1994-07"
+    },
+    "BGJ": {
+      "Country": "BULGARIA",
+      "Currency": "Lev A/52",
+      "NumericCode": 100,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "BGK": {
+      "Country": "BULGARIA",
+      "Currency": "Lev A/62",
+      "NumericCode": 100,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "BGL": {
+      "Country": "BULGARIA",
+      "Currency": "Lev",
+      "NumericCode": 100,
+      "MinorUnit": "",
+      "WithdrawalDate": "2003-11"
+    },
+    "BUK": {
+      "Country": "BURMA",
+      "Currency": "Kyat",
+      "NumericCode": 104,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-02"
+    },
+    "HRD": {
+      "Country": "CROATIA",
+      "Currency": "Croatian Dinar",
+      "NumericCode": 191,
+      "MinorUnit": "",
+      "WithdrawalDate": "1995-01"
+    },
+    "CYP": {
+      "Country": "CYPRUS",
+      "Currency": "Cyprus Pound",
+      "NumericCode": 196,
+      "MinorUnit": "",
+      "WithdrawalDate": "2008-01"
+    },
+    "CSJ": {
+      "Country": "CZECHOSLOVAKIA",
+      "Currency": "Krona A/53",
+      "NumericCode": 203,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "CSK": {
+      "Country": "CZECHOSLOVAKIA",
+      "Currency": "Koruna",
+      "NumericCode": 200,
+      "MinorUnit": "",
+      "WithdrawalDate": "1993-03"
+    },
+    "ECS": {
+      "Country": "ECUADOR",
+      "Currency": "Sucre",
+      "NumericCode": 218,
+      "MinorUnit": "",
+      "WithdrawalDate": "2000-09"
+    },
+    "ECV": {
+      "Country": "ECUADOR",
+      "Currency": "Unidad de Valor Constante (UVC)",
+      "NumericCode": 983,
+      "MinorUnit": "",
+      "WithdrawalDate": "2000-09"
+    },
+    "GQE": {
+      "Country": "EQUATORIAL GUINEA",
+      "Currency": "Ekwele",
+      "NumericCode": 226,
+      "MinorUnit": "",
+      "WithdrawalDate": "1986-06"
+    },
+    "EEK": {
+      "Country": "ESTONIA",
+      "Currency": "Kroon",
+      "NumericCode": 233,
+      "MinorUnit": "",
+      "WithdrawalDate": "2011-01"
+    },
+    "XEU": {
+      "Country": "EUROPEAN MONETARY CO-OPERATION FUND (EMCF)",
+      "Currency": "European Currency Unit (E.C.U)",
+      "NumericCode": 954,
+      "MinorUnit": "",
+      "WithdrawalDate": "1999-01"
+    },
+    "GEK": {
+      "Country": "GEORGIA",
+      "Currency": "Georgian Coupon",
+      "NumericCode": 268,
+      "MinorUnit": "",
+      "WithdrawalDate": "1995-10"
+    },
+    "DDM": {
+      "Country": "GERMAN DEMOCRATIC REPUBLIC",
+      "Currency": "Mark der DDR",
+      "NumericCode": 278,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-07 to 1990-09"
+    },
+    "DEM": {
+      "Country": "GERMANY",
+      "Currency": "Deutsche Mark",
+      "NumericCode": 276,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "GHC": {
+      "Country": "GHANA",
+      "Currency": "Cedi",
+      "NumericCode": 288,
+      "MinorUnit": "",
+      "WithdrawalDate": "2008-01"
+    },
+    "GHP": {
+      "Country": "GHANA",
+      "Currency": "Ghana Cedi",
+      "NumericCode": 939,
+      "MinorUnit": "",
+      "WithdrawalDate": "2007-06"
+    },
+    "GRD": {
+      "Country": "GREECE",
+      "Currency": "Drachma",
+      "NumericCode": 300,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "GNE": {
+      "Country": "GUINEA",
+      "Currency": "Syli",
+      "NumericCode": 324,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989-12"
+    },
+    "GNS": {
+      "Country": "GUINEA",
+      "Currency": "Syli",
+      "NumericCode": 324,
+      "MinorUnit": "",
+      "WithdrawalDate": "1986-02"
+    },
+    "GWE": {
+      "Country": "GUINEA-BISSAU",
+      "Currency": "Guinea Escudo",
+      "NumericCode": 624,
+      "MinorUnit": "",
+      "WithdrawalDate": "1978 to 1981"
+    },
+    "GWP": {
+      "Country": "GUINEA-BISSAU",
+      "Currency": "Guinea-Bissau Peso",
+      "NumericCode": 624,
+      "MinorUnit": "",
+      "WithdrawalDate": "1997-05"
+    },
+    "ITL": {
+      "Country": "SAN MARINO",
+      "Currency": "Italian Lira",
+      "NumericCode": 380,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "ISJ": {
+      "Country": "ICELAND",
+      "Currency": "Old Krona",
+      "NumericCode": 352,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "IEP": {
+      "Country": "IRELAND",
+      "Currency": "Irish Pound",
+      "NumericCode": 372,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "ILP": {
+      "Country": "ISRAEL",
+      "Currency": "Pound",
+      "NumericCode": 376,
+      "MinorUnit": "",
+      "WithdrawalDate": "1978 to 1981"
+    },
+    "ILR": {
+      "Country": "ISRAEL",
+      "Currency": "Old Shekel",
+      "NumericCode": 376,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "LAJ": {
+      "Country": "LAO",
+      "Currency": "Pathet Lao Kip",
+      "NumericCode": 418,
+      "MinorUnit": "",
+      "WithdrawalDate": "1979-12"
+    },
+    "LVL": {
+      "Country": "LATVIA",
+      "Currency": "Latvian Lats",
+      "NumericCode": 428,
+      "MinorUnit": "",
+      "WithdrawalDate": "2014-01"
+    },
+    "LVR": {
+      "Country": "LATVIA",
+      "Currency": "Latvian Ruble",
+      "NumericCode": 428,
+      "MinorUnit": "",
+      "WithdrawalDate": "1994-12"
+    },
+    "LSM": {
+      "Country": "LESOTHO",
+      "Currency": "Loti",
+      "NumericCode": 426,
+      "MinorUnit": "",
+      "WithdrawalDate": "1985-05"
+    },
+    "ZAL": {
+      "Country": "SOUTH AFRICA",
+      "Currency": "Financial Rand",
+      "NumericCode": 991,
+      "MinorUnit": "",
+      "WithdrawalDate": "1995-03"
+    },
+    "LTL": {
+      "Country": "LITHUANIA",
+      "Currency": "Lithuanian Litas",
+      "NumericCode": 440,
+      "MinorUnit": "",
+      "WithdrawalDate": "2014-12"
+    },
+    "LTT": {
+      "Country": "LITHUANIA",
+      "Currency": "Talonas",
+      "NumericCode": 440,
+      "MinorUnit": "",
+      "WithdrawalDate": "1993-07"
+    },
+    "LUC": {
+      "Country": "LUXEMBOURG",
+      "Currency": "Luxembourg Convertible Franc",
+      "NumericCode": 989,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-03"
+    },
+    "LUF": {
+      "Country": "LUXEMBOURG",
+      "Currency": "Luxembourg Franc",
+      "NumericCode": 442,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "LUL": {
+      "Country": "LUXEMBOURG",
+      "Currency": "Luxembourg Financial Franc",
+      "NumericCode": 988,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-03"
+    },
+    "MGF": {
+      "Country": "MADAGASCAR",
+      "Currency": "Malagasy Franc",
+      "NumericCode": 450,
+      "MinorUnit": "",
+      "WithdrawalDate": "2004-12"
+    },
+    "MVQ": {
+      "Country": "MALDIVES",
+      "Currency": "Maldive Rupee",
+      "NumericCode": 462,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989-12"
+    },
+    "MLF": {
+      "Country": "MALI",
+      "Currency": "Mali Franc",
+      "NumericCode": 466,
+      "MinorUnit": "",
+      "WithdrawalDate": "1984-11"
+    },
+    "MTL": {
+      "Country": "MALTA",
+      "Currency": "Maltese Lira",
+      "NumericCode": 470,
+      "MinorUnit": "",
+      "WithdrawalDate": "2008-01"
+    },
+    "MTP": {
+      "Country": "MALTA",
+      "Currency": "Maltese Pound",
+      "NumericCode": 470,
+      "MinorUnit": "",
+      "WithdrawalDate": "1983-06"
+    },
+    "MRO": {
+      "Country": "MAURITANIA",
+      "Currency": "Ouguiya",
+      "NumericCode": 478,
+      "MinorUnit": "",
+      "WithdrawalDate": "2017-12"
+    },
+    "MXP": {
+      "Country": "MEXICO",
+      "Currency": "Mexican Peso",
+      "NumericCode": 484,
+      "MinorUnit": "",
+      "WithdrawalDate": "1993-01"
+    },
+    "MZE": {
+      "Country": "MOZAMBIQUE",
+      "Currency": "Mozambique Escudo",
+      "NumericCode": 508,
+      "MinorUnit": "",
+      "WithdrawalDate": "1978 to 1981"
+    },
+    "MZM": {
+      "Country": "MOZAMBIQUE",
+      "Currency": "Mozambique Metical",
+      "NumericCode": 508,
+      "MinorUnit": "",
+      "WithdrawalDate": "2006-06"
+    },
+    "NLG": {
+      "Country": "NETHERLANDS",
+      "Currency": "Netherlands Guilder",
+      "NumericCode": 528,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "NIC": {
+      "Country": "NICARAGUA",
+      "Currency": "Cordoba",
+      "NumericCode": 558,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-10"
+    },
+    "PEH": {
+      "Country": "PERU",
+      "Currency": "Sol",
+      "NumericCode": 604,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "PEI": {
+      "Country": "PERU",
+      "Currency": "Inti",
+      "NumericCode": 604,
+      "MinorUnit": "",
+      "WithdrawalDate": "1991-07"
+    },
+    "PES": {
+      "Country": "PERU",
+      "Currency": "Sol",
+      "NumericCode": 604,
+      "MinorUnit": "",
+      "WithdrawalDate": "1986-02"
+    },
+    "PLZ": {
+      "Country": "POLAND",
+      "Currency": "Zloty",
+      "NumericCode": 616,
+      "MinorUnit": "",
+      "WithdrawalDate": "1997-01"
+    },
+    "PTE": {
+      "Country": "PORTUGAL",
+      "Currency": "Portuguese Escudo",
+      "NumericCode": 620,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-03"
+    },
+    "ROK": {
+      "Country": "ROMANIA",
+      "Currency": "Leu A/52",
+      "NumericCode": 642,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "ROL": {
+      "Country": "ROMANIA",
+      "Currency": "Old Leu",
+      "NumericCode": 642,
+      "MinorUnit": "",
+      "WithdrawalDate": "2005-06"
+    },
+    "STD": {
+      "Country": "SAO TOME AND PRINCIPE",
+      "Currency": "Dobra",
+      "NumericCode": 678,
+      "MinorUnit": "",
+      "WithdrawalDate": "2017-12"
+    },
+    "CSD": {
+      "Country": "SERBIA AND MONTENEGRO",
+      "Currency": "Serbian Dinar",
+      "NumericCode": 891,
+      "MinorUnit": "",
+      "WithdrawalDate": "2006-10"
+    },
+    "SKK": {
+      "Country": "SLOVAKIA",
+      "Currency": "Slovak Koruna",
+      "NumericCode": 703,
+      "MinorUnit": "",
+      "WithdrawalDate": "2009-01"
+    },
+    "SIT": {
+      "Country": "SLOVENIA",
+      "Currency": "Tolar",
+      "NumericCode": 705,
+      "MinorUnit": "",
+      "WithdrawalDate": "2007-01"
+    },
+    "RHD": {
+      "Country": "SOUTHERN RHODESIA",
+      "Currency": "Rhodesian Dollar",
+      "NumericCode": 716,
+      "MinorUnit": "",
+      "WithdrawalDate": "1978 to 1981"
+    },
+    "ESA": {
+      "Country": "SPAIN",
+      "Currency": "Spanish Peseta",
+      "NumericCode": 996,
+      "MinorUnit": "",
+      "WithdrawalDate": "1978 to 1981"
+    },
+    "ESB": {
+      "Country": "SPAIN",
+      "Currency": "A\" Account (convertible Peseta Account)",
+      "NumericCode": 995,
+      "MinorUnit": "",
+      "WithdrawalDate": "1994-12"
+    },
+    "SDD": {
+      "Country": "SUDAN",
+      "Currency": "Sudanese Dinar",
+      "NumericCode": 736,
+      "MinorUnit": "",
+      "WithdrawalDate": "2007-07"
+    },
+    "SDP": {
+      "Country": "SUDAN",
+      "Currency": "Sudanese Pound",
+      "NumericCode": 736,
+      "MinorUnit": "",
+      "WithdrawalDate": "1998-06"
+    },
+    "SRG": {
+      "Country": "SURINAME",
+      "Currency": "Surinam Guilder",
+      "NumericCode": 740,
+      "MinorUnit": "",
+      "WithdrawalDate": "2003-12"
+    },
+    "CHC": {
+      "Country": "SWITZERLAND",
+      "Currency": "WIR Franc (for electronic)",
+      "NumericCode": 948,
+      "MinorUnit": "",
+      "WithdrawalDate": "2004-11"
+    },
+    "TJR": {
+      "Country": "TAJIKISTAN",
+      "Currency": "Tajik Ruble",
+      "NumericCode": 762,
+      "MinorUnit": "",
+      "WithdrawalDate": "2001-04"
+    },
+    "TPE": {
+      "Country": "TIMOR-LESTE",
+      "Currency": "Timor Escudo",
+      "NumericCode": 626,
+      "MinorUnit": "",
+      "WithdrawalDate": "2002-11"
+    },
+    "TRL": {
+      "Country": "TURKEY",
+      "Currency": "Old Turkish Lira",
+      "NumericCode": 792,
+      "MinorUnit": "",
+      "WithdrawalDate": "2005-12"
+    },
+    "TMM": {
+      "Country": "TURKMENISTAN",
+      "Currency": "Turkmenistan Manat",
+      "NumericCode": 795,
+      "MinorUnit": "",
+      "WithdrawalDate": "2009-01"
+    },
+    "UGS": {
+      "Country": "UGANDA",
+      "Currency": "Uganda Shilling",
+      "NumericCode": 800,
+      "MinorUnit": "",
+      "WithdrawalDate": "1987-05"
+    },
+    "UGW": {
+      "Country": "UGANDA",
+      "Currency": "Old Shilling",
+      "NumericCode": 800,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989 to 1990"
+    },
+    "UAK": {
+      "Country": "UKRAINE",
+      "Currency": "Karbovanet",
+      "NumericCode": 804,
+      "MinorUnit": "",
+      "WithdrawalDate": "1996-09"
+    },
+    "SUR": {
+      "Country": "UNION OF SOVIET SOCIALIST REPUBLICS",
+      "Currency": "Rouble",
+      "NumericCode": 810,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-12"
+    },
+    "USS": {
+      "Country": "UNITED STATES",
+      "Currency": "US Dollar (Same day)",
+      "NumericCode": 998,
+      "MinorUnit": "",
+      "WithdrawalDate": "2014-03"
+    },
+    "UYN": {
+      "Country": "URUGUAY",
+      "Currency": "Old Uruguay Peso",
+      "NumericCode": 858,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989-12"
+    },
+    "UYP": {
+      "Country": "URUGUAY",
+      "Currency": "Uruguayan Peso",
+      "NumericCode": 858,
+      "MinorUnit": "",
+      "WithdrawalDate": "1993-03"
+    },
+    "VEB": {
+      "Country": "VENEZUELA",
+      "Currency": "Bolivar",
+      "NumericCode": 862,
+      "MinorUnit": "",
+      "WithdrawalDate": "2008-01"
+    },
+    "VEF": {
+      "Country": "VENEZUELA (BOLIVARIAN REPUBLIC OF)",
+      "Currency": "Bolívar",
+      "NumericCode": 937,
+      "MinorUnit": "",
+      "WithdrawalDate": "2018-08"
+    },
+    "VNC": {
+      "Country": "VIETNAM",
+      "Currency": "Old Dong",
+      "NumericCode": 704,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989-1990"
+    },
+    "YDD": {
+      "Country": "YEMEN, DEMOCRATIC",
+      "Currency": "Yemeni Dinar",
+      "NumericCode": 720,
+      "MinorUnit": "",
+      "WithdrawalDate": "1991-09"
+    },
+    "YUD": {
+      "Country": "YUGOSLAVIA",
+      "Currency": "New Yugoslavian Dinar",
+      "NumericCode": 890,
+      "MinorUnit": "",
+      "WithdrawalDate": "1990-01"
+    },
+    "YUM": {
+      "Country": "YUGOSLAVIA",
+      "Currency": "New Dinar",
+      "NumericCode": 891,
+      "MinorUnit": "",
+      "WithdrawalDate": "2003-07"
+    },
+    "YUN": {
+      "Country": "YUGOSLAVIA",
+      "Currency": "Yugoslavian Dinar",
+      "NumericCode": 890,
+      "MinorUnit": "",
+      "WithdrawalDate": "1995-11"
+    },
+    "ZRN": {
+      "Country": "ZAIRE",
+      "Currency": "New Zaire",
+      "NumericCode": 180,
+      "MinorUnit": "",
+      "WithdrawalDate": "1999-06"
+    },
+    "ZRZ": {
+      "Country": "ZAIRE",
+      "Currency": "Zaire",
+      "NumericCode": 180,
+      "MinorUnit": "",
+      "WithdrawalDate": "1994-02"
+    },
+    "ZMK": {
+      "Country": "ZAMBIA",
+      "Currency": "Zambian Kwacha",
+      "NumericCode": 894,
+      "MinorUnit": "",
+      "WithdrawalDate": "2012-12"
+    },
+    "ZWC": {
+      "Country": "ZIMBABWE",
+      "Currency": "Rhodesian Dollar",
+      "NumericCode": 716,
+      "MinorUnit": "",
+      "WithdrawalDate": "1989-12"
+    },
+    "ZWD": {
+      "Country": "ZIMBABWE",
+      "Currency": "Zimbabwe Dollar",
+      "NumericCode": 716,
+      "MinorUnit": "",
+      "WithdrawalDate": "2008-08"
+    },
+    "ZWN": {
+      "Country": "ZIMBABWE",
+      "Currency": "Zimbabwe Dollar (new)",
+      "NumericCode": 942,
+      "MinorUnit": "",
+      "WithdrawalDate": "2006-09"
+    },
+    "ZWR": {
+      "Country": "ZIMBABWE",
+      "Currency": "Zimbabwe Dollar",
+      "NumericCode": 935,
+      "MinorUnit": "",
+      "WithdrawalDate": "2009-06"
+    },
+    "XFO": {
+      "Country": "ZZ01_Gold-Franc",
+      "Currency": "Gold-Franc",
+      "NumericCode": "",
+      "MinorUnit": "",
+      "WithdrawalDate": "2006-10"
+    },
+    "XRE": {
+      "Country": "ZZ02_RINET Funds Code",
+      "Currency": "RINET Funds Code",
+      "NumericCode": "",
+      "MinorUnit": "",
+      "WithdrawalDate": "1999-11"
+    },
+    "XFU": {
+      "Country": "ZZ05_UIC-Franc",
+      "Currency": "UIC-Franc",
+      "NumericCode": "",
+      "MinorUnit": "",
+      "WithdrawalDate": "2013-11"
+    }
+  }

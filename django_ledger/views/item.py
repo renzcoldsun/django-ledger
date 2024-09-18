@@ -16,6 +16,10 @@ from django_ledger.forms.item import (
 from django_ledger.models import ItemModel, UnitOfMeasureModel, EntityModel
 from django_ledger.views.mixins import DjangoLedgerSecurityMixIn
 
+# for making this user-friendly
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
+
 
 # todo: Create delete views...
 
@@ -24,10 +28,16 @@ class UnitOfMeasureModelModelViewQuerySetMixIn:
     queryset = None
 
     def get_queryset(self):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         if self.queryset is None:
             self.queryset = UnitOfMeasureModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user
+                user_model=user_model
             )
         return super().get_queryset()
 
@@ -68,9 +78,15 @@ class UnitOfMeasureModelCreateView(DjangoLedgerSecurityMixIn, UnitOfMeasureModel
     def form_valid(self, form):
         instance: UnitOfMeasureModel = form.save(commit=False)
         entity_slug = self.kwargs['entity_slug']
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         try:
             entity_model: EntityModel = EntityModel.objects.for_user(
-                user_model=self.request.user
+                user_model=user_model
             ).get(slug__iexact=entity_slug)
             instance.entity = entity_model
         except ObjectDoesNotExist:
@@ -154,10 +170,16 @@ class ProductItemModelModelViewQuerySetMixIn:
     queryset = None
 
     def get_queryset(self):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         if not self.queryset:
             self.queryset = ItemModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user
+                user_model=user_model
             ).products().select_related(
                 'earnings_account', 'cogs_account',
                 'inventory_account', 'uom').order_by('-updated')
@@ -196,15 +218,27 @@ class ProductCreateView(DjangoLedgerSecurityMixIn,
                        })
 
     def get_form(self, form_class=None):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         return ProductCreateForm(
             entity_slug=self.kwargs['entity_slug'],
-            user_model=self.request.user,
+            user_model=user_model,
             **self.get_form_kwargs()
         )
 
     def form_valid(self, form):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+        
         entity_slug = self.kwargs['entity_slug']
-        entity_model_qs = EntityModel.objects.for_user(user_model=self.request.user)
+        entity_model_qs = EntityModel.objects.for_user(user_model=user_model)
         entity_model = get_object_or_404(entity_model_qs, slug__exact=entity_slug)
         item_model: ItemModel = form.save(commit=False)
         item_model.entity = entity_model
@@ -226,15 +260,27 @@ class ProductUpdateView(DjangoLedgerSecurityMixIn,
     }
 
     def get_queryset(self):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         return ItemModel.objects.products(
             entity_slug=self.kwargs['entity_slug'],
-            user_model=self.request.user
+            user_model=user_model
         )
 
     def get_form(self, form_class=None):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         return ProductUpdateForm(
             entity_slug=self.kwargs['entity_slug'],
-            user_model=self.request.user,
+            user_model=user_model,
             **self.get_form_kwargs()
         )
 

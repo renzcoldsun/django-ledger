@@ -40,6 +40,9 @@ from django_ledger.settings import (DJANGO_LEDGER_TRANSACTION_MAX_TOLERANCE, DJA
                                     DJANGO_LEDGER_PRODUCT_NUMBER_PREFIX)
 
 ITEM_LIST_RANDOM_SLUG_SUFFIX = ascii_lowercase + digits
+# for making this user-friendly
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
 
 
 class ItemModelValidationError(ValidationError):
@@ -72,20 +75,23 @@ class UnitOfMeasureModelManager(models.Manager):
         QuerySet
             A QuerySet with applied filters.
         """
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         qs = self.get_queryset()
         if isinstance(entity_slug, lazy_loader.get_entity_model()):
             return qs.filter(
                 Q(entity=entity_slug) &
                 (
-                        Q(entity__admin=user_model) |
-                        Q(entity__managers__in=[user_model])
+                        Q(entity__admin=user_model) 
                 )
             )
         return qs.filter(
             Q(entity__slug__exact=entity_slug) &
             (
-                    Q(entity__admin=user_model) |
-                    Q(entity__managers__in=[user_model])
+                    Q(entity__admin=user_model) 
             )
         )
 
@@ -105,6 +111,10 @@ class UnitOfMeasureModelManager(models.Manager):
         QuerySet
             A QuerySet with applied filters.
         """
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
         qs = self.for_entity(entity_slug=entity_slug, user_model=user_model)
         return qs.filter(is_active=True)
 
@@ -880,6 +890,10 @@ class ItemTransactionModelQuerySet(models.QuerySet):
 class ItemTransactionModelManager(models.Manager):
 
     def for_user(self, user_model):
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
         qs = self.get_queryset()
         return qs.filter(
             Q(item_model__entity__admin=user_model) |
@@ -887,6 +901,10 @@ class ItemTransactionModelManager(models.Manager):
         )
 
     def for_entity(self, user_model, entity_slug):
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
         qs = self.for_user(user_model)
         if isinstance(entity_slug, lazy_loader.get_entity_model()):
             return qs.filter(
@@ -1145,6 +1163,7 @@ class ItemTransactionModelAbstract(CreateUpdateMixIn):
                                               validators=[MinValueValidator(limit_value=0.0)])
     item_notes = models.CharField(max_length=400, null=True, blank=True, verbose_name=_('Description'))
     objects = ItemTransactionModelManager.from_queryset(queryset_class=ItemTransactionModelQuerySet)()
+    unit_cost_currency = models.CharField(max_length=4, null=True, blank=True, verbose_name=_('Currency'))
 
     class Meta:
         abstract = True
