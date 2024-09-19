@@ -26,15 +26,24 @@ from django_ledger.models import EntityModel, LedgerModel, EstimateModel
 from django_ledger.models.invoice import InvoiceModel
 from django_ledger.views.mixins import DjangoLedgerSecurityMixIn
 
+# for making this user-friendly
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
+
 
 class InvoiceModelModelViewQuerySetMixIn:
     queryset = None
 
     def get_queryset(self):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
         if self.queryset is None:
             self.queryset = InvoiceModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user
+                user_model=user_model
             ).select_related('customer', 'ledger').order_by('-created')
         return super().get_queryset()
 
@@ -73,6 +82,12 @@ class InvoiceModelCreateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
     for_estimate = False
 
     def get(self, request, entity_slug, **kwargs):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
 
         if not request.user.is_authenticated:
             return HttpResponseForbidden()
@@ -80,7 +95,7 @@ class InvoiceModelCreateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
         if self.for_estimate and 'ce_pk' in self.kwargs:
             estimate_qs = EstimateModel.objects.for_entity(
                 entity_slug=entity_slug,
-                user_model=self.request.user
+                user_model=user_model
             )
             estimate_model: EstimateModel = get_object_or_404(estimate_qs, uuid__exact=self.kwargs['ce_pk'])
             if not estimate_model.can_bind():
@@ -89,6 +104,11 @@ class InvoiceModelCreateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
 
     def get_context_data(self, **kwargs):
         context = super(InvoiceModelCreateView, self).get_context_data(**kwargs)
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
 
         if self.for_estimate:
             context['form_action_url'] = reverse('django_ledger:invoice-create-estimate',
@@ -98,7 +118,7 @@ class InvoiceModelCreateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
                                                  })
             estimate_qs = EstimateModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user
+                user_model=user_model
             ).select_related('customer')
             estimate_model = get_object_or_404(estimate_qs, uuid__exact=self.kwargs['ce_pk'])
             context['estimate_model'] = estimate_model
@@ -116,15 +136,21 @@ class InvoiceModelCreateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
 
     def get_form(self, form_class=None):
         entity_slug = self.kwargs['entity_slug']
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         if self.for_estimate:
             InvoiceModelCreateForEstimateForm(
                 entity_slug=entity_slug,
-                user_model=self.request.user,
+                user_model=user_model,
                 **self.get_form_kwargs()
             )
         return InvoiceModelCreateForm(
             entity_slug=entity_slug,
-            user_model=self.request.user,
+            user_model=user_model,
             **self.get_form_kwargs()
         )
 
@@ -134,12 +160,17 @@ class InvoiceModelCreateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
             entity_slug=self.AUTHORIZED_ENTITY_MODEL,
             commit_ledger=True
         )
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
 
         if self.for_estimate:
             ce_pk = self.kwargs['ce_pk']
             estimate_model_qs = EstimateModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user)
+                user_model=user_model)
 
             estimate_model = get_object_or_404(estimate_model_qs, uuid__exact=ce_pk)
             invoice_model.bind_estimate(estimate_model=estimate_model, commit=False)
@@ -189,15 +220,21 @@ class InvoiceModelUpdateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
 
     def get_form(self, form_class=None):
         form_class = self.get_form_class()
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         if self.request.method == 'POST' and self.action_update_items:
             return form_class(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user,
+                user_model=user_model,
                 instance=self.object
             )
         return form_class(
             entity_slug=self.kwargs['entity_slug'],
-            user_model=self.request.user,
+            user_model=user_model,
             **self.get_form_kwargs()
         )
 
@@ -209,6 +246,12 @@ class InvoiceModelUpdateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
         context['header_title'] = title
 
         ledger_model: LedgerModel = self.object.ledger
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
 
         if not invoice_model.is_configured():
             messages.add_message(
@@ -243,7 +286,7 @@ class InvoiceModelUpdateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
             invoice_itemtxs_formset_class = get_invoice_itemtxs_formset_class(invoice_model)
             itemtxs_formset = invoice_itemtxs_formset_class(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user,
+                user_model=user_model,
                 invoice_model=invoice_model,
                 queryset=itemtxs_qs
             )
@@ -269,9 +312,15 @@ class InvoiceModelUpdateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
 
     def form_valid(self, form):
         invoice_model: InvoiceModel = form.save(commit=False)
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         if invoice_model.can_migrate():
             invoice_model.migrate_state(
-                user_model=self.request.user,
+                user_model=user_model,
                 entity_slug=self.kwargs['entity_slug']
             )
         messages.add_message(self.request,
@@ -292,6 +341,12 @@ class InvoiceModelUpdateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
         return super(InvoiceModelUpdateView, self).get(request, *args, **kwargs)
 
     def post(self, request, entity_slug, invoice_pk, *args, **kwargs):
+        user_model = self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         if self.action_update_items:
             if not request.user.is_authenticated:
                 return HttpResponseForbidden()
@@ -301,7 +356,7 @@ class InvoiceModelUpdateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
             self.object = invoice_model
             invoice_itemtxs_formset_class = get_invoice_itemtxs_formset_class(invoice_model)
             itemtxs_formset = invoice_itemtxs_formset_class(request.POST,
-                                                            user_model=self.request.user,
+                                                            user_model=user_model,
                                                             invoice_model=invoice_model,
                                                             entity_slug=entity_slug)
 
@@ -318,7 +373,7 @@ class InvoiceModelUpdateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
             if itemtxs_formset.has_changed():
                 if itemtxs_formset.is_valid():
                     itemtxs_list = itemtxs_formset.save(commit=False)
-                    entity_qs = EntityModel.objects.for_user(user_model=self.request.user)
+                    entity_qs = EntityModel.objects.for_user(user_model=user_model)
                     entity_model: EntityModel = get_object_or_404(entity_qs, slug__exact=entity_slug)
 
                     for itemtxs in itemtxs_list:
@@ -339,7 +394,7 @@ class InvoiceModelUpdateView(DjangoLedgerSecurityMixIn, InvoiceModelModelViewQue
 
                     invoice_model.migrate_state(
                         entity_slug=entity_slug,
-                        user_model=self.request.user,
+                        user_model=user_model,
                         raise_exception=False,
                         itemtxs_qs=itemtxs_qs
                     )
