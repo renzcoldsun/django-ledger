@@ -40,22 +40,12 @@ class DashboardView(DjangoLedgerSecurityMixIn, ListView):
         return context
 
     def get_queryset(self):
+        user_model=self.request.user
         if global_settings.DJANGO_LEDGER_UTILS:
-            po = __import__(global_settings.DJANGO_LEDGER_UTILS)
-            utils = po.utils
-            e = utils.getEntity()
             UserModel = get_user_model()
-            if global_settings.ENTITY_USER:
-                user_model = UserModel.objects.get(
-                    username__exact=global_settings.ENTITY_USER)
-                return EntityModel.objects.for_user(
-                    user_model=user_model
-                ).order_by('-created')
-            else:
-                return EntityModel.objects.for_user(
-                    user_model=self.request.user
-                ).order_by('-created')
-        else:
-            return EntityModel.objects.for_user(
-                user_model=self.request.user
-            ).order_by('-created')
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
+        return EntityModel.objects.for_user(
+            user_model=user_model
+        ).order_by('-created')

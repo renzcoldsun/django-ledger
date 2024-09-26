@@ -15,6 +15,9 @@ from django_ledger.models.closing_entry import ClosingEntryModel
 from django_ledger.models.entity import EntityModel
 from django_ledger.views import DjangoLedgerSecurityMixIn
 
+# for making this user-friendly
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
 
 class ClosingEntryModelViewQuerySetMixIn:
     queryset = None
@@ -22,9 +25,15 @@ class ClosingEntryModelViewQuerySetMixIn:
 
     def get_queryset(self):
         if self.queryset is None:
+            user_model=self.request.user
+            if global_settings.DJANGO_LEDGER_UTILS:
+                UserModel = get_user_model()
+                username = global_settings.ENTITY_USER
+                user_model = UserModel.objects.get(username__exact=username)
+            
             qs = ClosingEntryModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user
+                user_model=user_model
             ).select_related('entity_model', 'ledger_model')
             if self.queryset_annotate_txs_count:
                 qs = qs.annotate(ce_txs_count=Count('closingentrytransactionmodel'))
@@ -78,8 +87,14 @@ class ClosingEntryModelCreateView(DjangoLedgerSecurityMixIn, ClosingEntryModelVi
         }
 
     def get_object(self, queryset=None):
+        user_model=self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
         if not getattr(self, 'object'):
-            entity_model_qs = EntityModel.objects.for_user(user_model=self.request.user)
+            entity_model_qs = EntityModel.objects.for_user(user_model=user_model)
             entity_model = get_object_or_404(entity_model_qs, slug__exact=self.kwargs['entity_slug'])
             self.object = entity_model
         return self.object
@@ -186,7 +201,13 @@ class ClosingEntryModelActionView(DjangoLedgerSecurityMixIn,
                        })
 
     def get(self, request, *args, **kwargs):
-        kwargs['user_model'] = self.request.user
+        user_model=self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
+
+        kwargs['user_model'] = user_model
         if not self.action_name:
             raise ImproperlyConfigured('View attribute action_name is required.')
         response = super(ClosingEntryModelActionView, self).get(request, *args, **kwargs)

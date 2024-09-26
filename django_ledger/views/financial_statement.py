@@ -19,14 +19,22 @@ from django_ledger.views.mixins import (
     BaseDateNavigationUrlMixIn, PDFReportMixIn
 )
 
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
 
 class EntityModelModelViewQuerySetMixIn:
     queryset = None
 
     def get_queryset(self):
         if self.queryset is None:
+            user_model = self.request.user
+            if global_settings.DJANGO_LEDGER_UTILS:
+                UserModel = get_user_model()
+                username = global_settings.ENTITY_USER
+                user_model = UserModel.objects.get(username__exact=username)
+
             self.queryset = EntityModel.objects.for_user(
-                user_model=self.request.user).select_related('default_coa')
+                user_model=user_model).select_related('default_coa')
         return super().get_queryset()
 
 

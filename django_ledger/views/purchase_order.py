@@ -22,15 +22,23 @@ from django_ledger.forms.purchase_order import (PurchaseOrderModelCreateForm, Ba
 from django_ledger.models import PurchaseOrderModel, ItemTransactionModel, EstimateModel
 from django_ledger.views.mixins import DjangoLedgerSecurityMixIn
 
+# for making this user-friendly
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
 
 class PurchaseOrderModelModelViewQuerySetMixIn:
     queryset = None
 
     def get_queryset(self):
+        user_model=self.request.user
+        if global_settings.DJANGO_LEDGER_UTILS:
+            UserModel = get_user_model()
+            username = global_settings.ENTITY_USER
+            user_model = UserModel.objects.get(username__exact=username)
         if self.queryset is None:
             self.queryset = PurchaseOrderModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=self.request.user
+                user_model=user_model
             ).select_related('entity', 'ce_model')
         return super().get_queryset()
 

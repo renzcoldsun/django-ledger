@@ -17,21 +17,30 @@ from django_ledger.views.mixins import DjangoLedgerSecurityMixIn, EntityUnitMixI
 
 
 # from jsonschema import validate, ValidationError
+# for making this user-friendly
+from django.contrib.auth import get_user_model
+from django.conf import settings as global_settings
 
 
 class PnLAPIView(DjangoLedgerSecurityMixIn, EntityUnitMixIn, View):
     http_method_names = ['get']
 
     def get(self, request, *args, **kwargs):
+
         if request.user.is_authenticated:
+            user_model=self.request.user
+            if global_settings.DJANGO_LEDGER_UTILS:
+                UserModel = get_user_model()
+                username = global_settings.ENTITY_USER
+                user_model = UserModel.objects.get(username__exact=username)
             entity = EntityModel.objects.for_user(
-                user_model=self.request.user).get(
+                user_model=user_model).get(
                 slug__exact=self.kwargs['entity_slug'])
 
             unit_slug = self.get_unit_slug()
 
             io_digest = entity.digest(
-                user_model=self.request.user,
+                user_model=user_model,
                 unit_slug=unit_slug,
                 equity_only=True,
                 signs=False,
@@ -72,9 +81,15 @@ class PayableNetAPIView(DjangoLedgerSecurityMixIn, EntityUnitMixIn, View):
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
+            user_model=request.user
+            if global_settings.DJANGO_LEDGER_UTILS:
+                UserModel = get_user_model()
+                username = global_settings.ENTITY_USER
+                user_model = UserModel.objects.get(username__exact=username)
+
             bill_qs = BillModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=request.user,
+                user_model=user_model,
             ).unpaid()
 
             # todo: implement this...
@@ -104,9 +119,15 @@ class ReceivableNetAPIView(DjangoLedgerSecurityMixIn, EntityUnitMixIn, View):
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
+            user_model=request.user
+            if global_settings.DJANGO_LEDGER_UTILS:
+                UserModel = get_user_model()
+                username = global_settings.ENTITY_USER
+                user_model = UserModel.objects.get(username__exact=username)
+
             invoice_qs = InvoiceModel.objects.for_entity(
                 entity_slug=self.kwargs['entity_slug'],
-                user_model=request.user,
+                user_model=user_model,
             ).unpaid()
 
             # todo: implement this...
